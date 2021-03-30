@@ -168,7 +168,8 @@ const SignIn = () => {
 
     // verify user/pwd, get encoded userid as access and refresh tokens in return
     //fetch("http://localhost:5000/fastlogin", config)
-    fetch(`${process.env.BE_NETWORK}:${process.env.BE_PORT}/fastlogin`, config)
+    //fetch(`${process.env.REACT_APP_BE_NETWORK}:${process.env.REACT_APP_BE_PORT}/fastlogin`, config)
+    fetch(`${process.env.REACT_APP_API_SERVICE_URL}/fastlogin`, config)
       .then(response => response.json())
       .then(data => {
 
